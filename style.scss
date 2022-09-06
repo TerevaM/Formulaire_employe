@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin dcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Silkscreen&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #2f2f2f;
+    form {
+        @include dcc;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        margin: 2px;
+        padding: 50px 100px;
+        background-color: rgba(0, 0, 0, 0.541);
+        border-radius: 20px;
+        label {
+            color: white;
+        }
+        input {
+            outline: none;
+        }
+        button {
+            margin: 10px;
+        }
+    }
+    table {
+        width: 90%;
+        background-color: grey;
+        tr {
+            height: 50px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        thead {
+            background-color: #1a1a1a;
+            color: #838383;
+            text-transform:uppercase;
+        }
+        tbody {
+            background-color: white;
+            color: #1a1a1a;
+            tr {
+                td:nth-child(1) {
+                    display: flex;
+                    align-items: center;
+                }
+                td {
+                    padding: 5px 5px;
+                }
+            }
+            tr:nth-child(even) {
+                background-color: #d1d1d1;
+            }
+        }
+    
+    }
+    .wrong{
+        background-color: red;
+        color: white;
+    }
+    #modalContent {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.363);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        animation: appear 0.5s;
+        ul {
+            position: relative;
+            list-style-type: none;
+            background-color: white;
+            padding: 10%;
+            border-radius: 20px;
+            li {
+                cursor: default;
+            }
+        }
+        button{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(197, 197, 197);
+            border: 2px solid grey;
+            transition: all 0.5s;
+        }
+        button:hover {
+            background-color: rgb(168, 168, 168);
+        }
+    }
+}

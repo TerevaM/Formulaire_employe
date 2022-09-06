@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Objet</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <form>
+            <label for="fname">Prenom</label>
+            <input type="text" id="fname" value="Tereva" required>
+            <label for="lname">Nom</label>
+            <input type="text" id="lname" value="Millet" min="2" max="30" pattern="[^0-9]+" required>
+            <label for="email">Email</label>
+            <input type="text" id="email" pattern=".{3,}@.{2,}.[fr|com|io]" value="terevamillet@yahoo.fr" required>
+            <label for="pwd">Mot de passe</label>
+            <input type="password" id="pwd" minlength="8" value="VoiciUnMdp123!" patern="[a-zA-Z0-9!@#\$%\^\&*_=+-]"
+                required>
+            <label for="address">Adresse</label>
+            <input type="text" id="address" value="Rue des potiers" required>
+            <label for="phone">Telephone</label>
+            <input type="tel" id="phone" value="0699605170" pattern="[0-9]{10}" placeholder="###" required>
+            <label for="contrat">Contrat</label>
+            <select name="contrat" id="contrat" required>
+                <option value="sans contrat" disabled selected>Contrat</option>
+                <option value="CDD">CDD</option>
+                <option value="CDI">CDI</option>
+            </select>
+            <label for="birth">Anniversaire</label>
+            <input type="date" value="2000-09-19" max="2022-09-01" id="birth" required>
+            <label for="entry">Date d'entrée</label>
+            <input type="date" required value="2022-09-01">
+            <label for="exp">Expérience</label>
+            <input type="number" min="0" max="100" value="0" required>
+            <button type="button">Envoyez</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>user</th>
+                    <th>email</th>
+                    <th>Adresse</th>
+                    <th>tel</th>
+                    <th>contrat</th>
+                    <th>age</th>
+                    <th>+ d'infos</th>
+                    <th>supprimé</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="modalContent">
+        </div>
+        <script src="./js.js"></script>
+        <script src="./js2.js"></script>
+    </body>
+
+</html>

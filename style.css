@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Silkscreen&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #2f2f2f;
+}
+body form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  margin: 2px;
+  padding: 50px 100px;
+  background-color: rgba(0, 0, 0, 0.541);
+  border-radius: 20px;
+}
+body form label {
+  color: white;
+}
+body form input {
+  outline: none;
+}
+body form button {
+  margin: 10px;
+}
+body table {
+  width: 90%;
+  background-color: grey;
+}
+body table tr {
+  height: 50px;
+}
+body table img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+body table thead {
+  background-color: #1a1a1a;
+  color: #838383;
+  text-transform: uppercase;
+}
+body table tbody {
+  background-color: white;
+  color: #1a1a1a;
+}
+body table tbody tr td:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+body table tbody tr td {
+  padding: 5px 5px;
+}
+body table tbody tr:nth-child(even) {
+  background-color: #d1d1d1;
+}
+body .wrong {
+  background-color: red;
+  color: white;
+}
+body #modalContent {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.363);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: appear 0.5s;
+          animation: appear 0.5s;
+}
+body #modalContent ul {
+  position: relative;
+  list-style-type: none;
+  background-color: white;
+  padding: 10%;
+  border-radius: 20px;
+}
+body #modalContent ul li {
+  cursor: default;
+}
+body #modalContent button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(197, 197, 197);
+  border: 2px solid grey;
+  transition: all 0.5s;
+}
+body #modalContent button:hover {
+  background-color: rgb(168, 168, 168);
+}/*# sourceMappingURL=style.css.map */
